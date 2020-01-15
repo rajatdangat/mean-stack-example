@@ -1,0 +1,17 @@
+<h1> <%= title %> </h1>
+<ul>
+    <% for(let i=0; i<blobs.length; i++){ %>
+        <li> <%= blobs[i].name %> </li>
+        <li> <%= blobs[i].badge %> </li>
+        <li> <%= blobs[i].dob %> </li>
+        <li> <%= blobs[i].isloved %> </li>
+        <li> <%= blobs[i]._id %> </li>
+
+        <form action="/blobs/<%= blobs[i]._id %>/edit" method="post", enctype="application/x-www-form-urlencoded">
+            <input type="hidden" name="_method" value="DELETE">
+            <button type="submit">DELETE</button>
+        </form>
+        <p><a href="/blobs/<%= blobs[i]._id %>/edit">EDIT</a></p>
+        <p><a href="/blobs/<%= blobs[i]._id %>">SHOW</a></p>
+    <% } %>
+</ul>

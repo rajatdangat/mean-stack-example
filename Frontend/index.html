@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="javascripts/angular.min.js"></script>
+    <script src="javascripts/angular-route.js"></script>
+    <script src="javascripts/app.js"></script>
+
+    <link rel="stylesheet" href="stylesheets/w3.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body ng-app="myModule">
+    <div class="app-container">
+        <h1>Blobs Page</h1>
+        <div>
+            <a href="#!/blobs" class="w3-button w3-blue">View blobs List</a> &nbsp; &nbsp; &nbsp;
+            <a href="#!/new" class="w3-button w3-red">+ Add new blob</a>
+            <hr>
+            <ng-view></ng-view>
+        </div>
+    </div>
+</body>
+</html>

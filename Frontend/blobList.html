@@ -1,0 +1,25 @@
+<h3>Blobs List</h3>
+<span class="filters">Filter: </span>
+<span class="filters"><input type="checkbox" name="name" checked ng-model="nameChk"> Name</span>
+<span class="filters"><input type="checkbox" name="badge" checked ng-model="badgeChk"> Badge</span>
+<span class="filters"><input type="checkbox" name="dob" checked ng-model="dobChk"> Date of Birth</span>
+<span class="filters"><input type="checkbox" name="isloved" checked ng-model="islovedChk"> Is Loved</span>
+<br> <br>
+<table class="w3-table w3-bordered w3-centered">
+    <thead>
+        <tr>
+            <th ng-show="nameChk">Name</th>
+            <th ng-show="badgeChk">Badge</th>
+            <th ng-show="dobChk">Date of Birth</th>
+            <th ng-show="islovedChk">Is Loved?</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="blob in blobs" ng-click="viewDetails(blob._id)">
+            <td ng-show="nameChk"> {{ blob.name }} </td>
+            <td ng-show="badgeChk"> {{ blob.badge }} </td>
+            <td ng-show="dobChk"> {{ blob.dob }} </td>
+            <td ng-show="islovedChk"> {{ blob.isloved === true ? '💗' : '💔' }} </td>
+        </tr>
+    </tbody>
+</table>

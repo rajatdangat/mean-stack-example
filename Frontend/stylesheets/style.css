@@ -1,0 +1,62 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.filters {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.button-bottom {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+.app-container {
+  margin: 0 auto;
+  width: 35%;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-size: 1.3rem;
+  padding: 20px 0;
+}
+
+.form-data {
+  font-size: 1.3rem;
+}
+
+.w3-table {
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.w3-table tbody tr:hover {
+  background-color: lightgrey;
+}
+
+.w3-table thead {
+  background-color: darkgrey;
+}
+
+.homepg-btn {
+  margin-bottom: 20px;
+}

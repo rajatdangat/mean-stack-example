@@ -1,0 +1,9 @@
+<h3>Add New Blob</h3>
+
+<div>
+    <p><span class="form-label">Name:</span> <input type="text" name="name" ng-model="blob.name" class="w3-input"> </p>
+    <p><span class="form-label">Badge:</span> <input type="number" name="badge" ng-model="blob.badge" class="w3-input"> </p>
+    <p><span class="form-label">Date of Birth:</span> <input type="date" name="dob" ng-model="blob.dob" class="w3-input"> </p>
+    <p><span class="form-label">Are you Loved?:</span> <input type="checkbox" name="isloved" ng-model="blob.isloved" class="w3-check"> </p>
+</div>
+<button ng-click="addBlob(blob)" class="w3-button w3-red button-bottom">Add</button>

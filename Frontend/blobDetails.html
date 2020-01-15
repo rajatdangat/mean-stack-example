@@ -1,0 +1,31 @@
+<h3>Blob Details</h3>
+<table class="w3-table">
+    <tr>    
+        <th> <span class="form-label">Name: </span> </th>
+        <td ng-if="!isUpdateBlob" class="form-data"> {{ blob.name }} </td>
+        <td ng-if = "isUpdateBlob"> <input type="text" name="name" ng-value=blob.name ng-model="blob.name" class="w3-input"> </td>
+    </tr>
+
+    <tr>    
+        <th> <span class="form-label">Badge: </span> </th>
+        <td ng-if="!isUpdateBlob" class="form-data"> {{ blob.badge }} </td>
+        <td ng-if = "isUpdateBlob"> <input type="number" name="badge" ng-value=blob.badge ng-model="blob.badge" class="w3-input"> </td>
+    </tr>
+
+    <tr>    
+        <th> <span class="form-label">Date of Birth: </span> </th>
+        <td ng-if="!isUpdateBlob" class="form-data"> {{ dob }} </td>
+        <td ng-if = "isUpdateBlob"> <input type="date" name="dob" ng-value=dob ng-model="blob.dob" class="w3-input"> </td>
+    </tr>
+
+    <tr>    
+        <th> <span class="form-label">Is Loved?: </span> </th>
+        <td ng-if="!isUpdateBlob" class="form-data"> {{ blob.isloved === true ? '💗' : '💔' }} </td>
+        <td ng-if = "isUpdateBlob"> <input type="checkbox" name="isloved" ng-checked="blob.isloved" ng-model="blob.isloved" class="w3-check"> </td>
+    </tr>
+</table>
+
+<button ng-click="deleteBlob(blob._id)" class="w3-button w3-red button-bottom">DELETE</button>
+<button ng-if="!isUpdateBlob" ng-click="editBlob()" class="w3-button w3-green button-bottom">EDIT</button>
+<button ng-if="isUpdateBlob" ng-click="updateBlob(blob._id)" class="w3-button w3-green button-bottom">UPDATE</button>
+<button ng-if="isUpdateBlob" ng-click="cancelEdit()" class="w3-button w3-orange button-bottom">CANCEL</button>

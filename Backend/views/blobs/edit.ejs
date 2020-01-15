@@ -1,0 +1,9 @@
+<h1> <%= blob._id %> </h1>
+<form action="/blobs/<%= blob._id %>/edit", method="post", name="updateblob", enctype="application/x-www-form-urlencoded">
+    <p>Name: <input type="text" name="name" value="<%= blob.name %>"></p>
+    <p>Badge: <input type="number" name="badge" value="<%= blob.badge %>"></p>
+    <p>DOB: <input type="date" name="dob" value="<%= blobdob %>"></p>
+    <p>Are you Loved?: <input type="checkbox" name="isloved" checked="<%= (blob.isloved === 'true') ? "checked" : undefined %>"></p>
+    <p><input type="hidden" name="_method" value='PUT'></p>
+    <button type="submit">UPDATE</button>
+</form>
